@@ -77,9 +77,7 @@ header{
     position:fixed;
     top:0;
     background-color: var(--clr-blue-normal);
-    box-sizing:border-box;
     width:100%;
-    padding:2rem;
     z-index:1;
 }
 .head{
@@ -89,6 +87,8 @@ header{
     align-items:center;
     max-width:1280px;
     margin:0 auto;
+    padding:2rem;
+    box-sizing:border-box;
 }
 
 .logotipo{
@@ -809,9 +809,7 @@ input::placeholder{
 }
 /*footer*/
 footer{
-    
     background-color:var(--clr-blue-normal);
-    padding: 2rem;
     width:100%;
 }
 .foot{
@@ -820,6 +818,8 @@ footer{
     align-items:center;
     flex-wrap:wrap;
     flex-direction:column;
+    padding: 2rem;
+    box-sizing:border-box;
 }
 .foot-column{
     margin-top:2rem;
@@ -850,6 +850,8 @@ footer img{
         flex-direction:row;
         max-width:1280px;
         margin: 0 auto;
+        padding: 2rem;
+        box-sizing:border-box;
     }
     .foot-column{
         text-align:left;
