@@ -50,12 +50,15 @@ section:nth-child(2){
 }
 section{
     width:100%;
+
 }
 .section__title{
     font:800 2.8rem var(--ff);
     color: var(--clr-blue-normal);
     text-align:center;
     width:100%;
+    margin-bottom: 2rem;
+    margin-top:4rem;
 }
 strong{
     color: var(--clr-orange-normal);
@@ -399,7 +402,7 @@ nav li a:hover{
 /* Sobre */
 
 .sobre{
-    padding:2rem;
+    padding:4rem 2rem 4rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -428,16 +431,17 @@ nav li a:hover{
     }
     .sobre .section__title, .desc{
         text-align: left;
-        margin-left:1.6rem;
+        margin-left:4rem;
     }
 }
 @media screen and (min-width: 1024px){
-    .section__title{
-        font-size:3rem;
+    .sobre .section__title{
+        font:800 4rem var(--ff);
+        color: var(--clr-orange-normal);
     }
     .desc{
         font-size: 1.4rem;
-        line-height:1.56;
+        line-height:1.5;
     }
 }
 @media screen and (min-width:1280px){
@@ -585,7 +589,7 @@ nav li a:hover{
 /*Planos*/
 
 .planos{
-    padding:0 2rem;
+    padding:0 2rem 8rem;
 }
 .container-planos{
     display:flex;
@@ -661,16 +665,10 @@ sub{
     box-sizing: border-box !important;
     color: #fff !important;
 }
-@media screen and (max-width:768px){
-    .plano:nth-child(2){
-        order:-1;
-    }
-
-}
 @media screen and (min-width:1024px){
     .container-planos{
         flex-direction:row;
-        justify-content:space-between;
+        justify-content:center;
         flex-wrap:nowrap;
         max-width:1280px;
         margin: 0 auto;
@@ -995,4 +993,49 @@ footer img{
 }
 .contato__unidade .endereco h3{
     font-size:3.2rem;
+}
+.btn-hidden{
+    display: none;
+}
+.btn-whats{
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+    z-index:9;
+    width:60px;
+    height:60px;
+    background-color: #25d366;
+    border-radius:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-hover);
+    box-shadow: var(--box-shadow);
+    cursor:pointer;
+    animation: btn 1.5s ease-in-out 0s infinite alternate;
+}
+@keyframes btn {
+    from{
+        bottom:20px;
+    }to{
+        bottom:35px;
+    }
+}
+.btn-whats:hover{
+    transform:scale(1.1);
+}
+.btn-whats .fa-brands{
+    background-color: transparent;
+    color: #fff;
+    margin:0;
+    padding:0;
+    margin-bottom:1.2rem;
+    margin-right:.4rem;
+    font-size:4rem;
+}
+@media screen and (min-width: 1024px){
+    .btn-whats{
+        right:24rem;
+        bottom:4rem;
+    }
 }

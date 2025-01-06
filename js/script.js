@@ -2,6 +2,8 @@ const _elements = {
     bar:  document.querySelector('.bar'),
     barScreen: document.querySelector('.bar-modal'),
     barLinks: document.querySelectorAll('.item'),
+    btnWhats: document.querySelector('.btn-hidden'),
+    unidades: document.querySelector('.unidades')
 }
 
 _elements.bar.addEventListener('click', () =>{
@@ -24,4 +26,12 @@ _elements.barLinks.forEach(item =>{
     });
 });
 
+window.onscroll = function(){
+    scroll();
+}
+function scroll(){
+    if(document.documentElement.scrollTop > 800){
+        _elements.btnWhats.classList.add('btn-whats');
+    }
+}
 
